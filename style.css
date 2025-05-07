@@ -130,6 +130,7 @@ body {
   font-size: 24px;
   line-height: 36px;
   letter-spacing: 0px;
+  color: var(--Green900);
 }
 
 .text-preset-4 {
@@ -166,7 +167,7 @@ body {
 .bill-container,
 .tip-contianer,
 .people-container {
-  dipsplay: flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -177,4 +178,43 @@ body {
 
 .bill-container {
   gap: 32px;
+}
+
+.label-text {
+  color: var(--Grey500);
+}
+
+.text-input {
+  background-color: var(--Grey50);
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 50%;
+}
+
+.number-input {
+  text-align: right;
+}
+
+.tip-contiainer {
+  gap: 8px;
+}
+
+.tip-btn {
+  background-color: var(--Green900);
+  color: var(--White);
+  border-radius: 5px;
+  padding: 8px 16px;
+  min-width: 147px;
+}
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.custom-btn {
+  background-color: var(--Grey50);
+  color: var(--Green900);
 }
