@@ -5,41 +5,47 @@
   --Black: #000000;
 
   /* Grey */
-  --Grey600: #3D6666;
+  --Grey600: #3d6666;
   --Grey550: #547878;
-  --Grey500: #5E7A7D;
-  --Grey400: #7F9D9F;
-  --Grey300: #9EBBBD;
-  --Grey200: #C5E4E7;
-  --Grey50: #F3F9FA;
+  --Grey500: #5e7a7d;
+  --Grey400: #7f9d9f;
+  --Grey300: #9ebbbd;
+  --Grey200: #c5e4e7;
+  --Grey50: #f3f9fa;
 
   /* Green */
-  --Green900: #00474B;
+  --Green900: #00474b;
   --Green800: #085c61;
-  --Green750: #0D686D;
-  --Green400: #26C2AE;
-  --Green200: #9FE8DF;
+  --Green750: #0d686d;
+  --Green400: #26c2ae;
+  --Green200: #9fe8df;
 
   /* Orange */
-  --Orange400: #E17052;
+  --Orange400: #e17052;
 }
 
 /* CSS Reset */
 
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 /* Remove default list styles */
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
 /* Ensure images are responsive and don't exceed their container */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   max-width: 100%;
   display: block;
 }
@@ -51,7 +57,10 @@ a {
 }
 
 /* Reset buttons to avoid inconsistent styling */
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font: inherit;
   border: none;
   background: none;
@@ -59,7 +68,8 @@ button, input, select, textarea {
 }
 
 /* Ensure form elements don't overflow */
-input, textarea {
+input,
+textarea {
   width: 100%;
 }
 
@@ -71,7 +81,9 @@ table {
 
 /* Disable animations for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation: none !important;
     transition: none !important;
   }
@@ -93,8 +105,11 @@ html {
 /* Ensure body takes up at least full viewport height */
 body {
   min-height: 100vh;
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
   font-weight: 700;
+  background-color: var(--Grey200);
+  display: flex;
+  flex-direction: column;
 }
 
 /* Typography Classes */
@@ -115,6 +130,7 @@ body {
   font-size: 24px;
   line-height: 36px;
   letter-spacing: 0px;
+  color: var(--Green900);
 }
 
 .text-preset-4 {
@@ -133,4 +149,72 @@ body {
   font-size: 13px;
   line-height: 19px;
   letter-spacing: 0px;
+}
+
+/* Main Layout */
+
+.header-image {
+  margin: 41px auto;
+}
+
+.main-content {
+  background-color: var(--White);
+  border-radius: 20px;
+  width: 100%;
+}
+
+.content-container,
+.bill-container,
+.tip-contianer,
+.people-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  padding: 32px 24px;
+  gap: 32px;
+}
+
+.bill-container {
+  gap: 32px;
+}
+
+.label-text {
+  color: var(--Grey500);
+}
+
+.text-input {
+  background-color: var(--Grey50);
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 50%;
+}
+
+.number-input {
+  text-align: right;
+}
+
+.tip-contiainer {
+  gap: 8px;
+}
+
+.tip-btn {
+  background-color: var(--Green900);
+  color: var(--White);
+  border-radius: 5px;
+  padding: 8px 16px;
+  min-width: 147px;
+}
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.custom-btn {
+  background-color: var(--Grey50);
+  color: var(--Green900);
 }

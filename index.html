@@ -1,15 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tip Calculator App</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <script src="main.js" defer></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header-image">
+      <h1>
+        <img src="./images/logo.svg" alt="Splitter Logo" />
+      </h1>
+    </div>
+    <main class="main-content">
+      <div class="content-container">
+        <section class="bill-container">
+          <article class="bill-header">
+            <form action="">
+              <label for="bill" class="text-preset-5 label-text">Bill</label>
+              <div class="text-input">
+                <img src="./images/icon-dollar.svg" alt="US Dollar Icon" />
+                <input
+                  type="number"
+                  id="bill"
+                  placeholder="0"
+                  step="0.01"
+                  class="text-preset-3 number-input"
+                />
+              </div>
+            </form>
+          </article>
+          <article class="tip-container">
+            <h2 class="text-preset-5 label-text">Select Tip %</h2>
+            <div class="button-grid">
+              <button class="tip-btn" data-tip="5">5%</button>
+              <button class="tip-btn" data-tip="5">10%</button>
+              <button class="tip-btn" data-tip="5">15%</button>
+              <button class="tip-btn" data-tip="5">25%</button>
+              <button class="tip-btn" data-tip="5">50%</button>
+              <button class="tip-btn custom-btn" data-tip="5">Custom</button>
+            </div>
+          </article>
+          <article class="people-container">
+            <form action="">
+              <label for="number-of-people" class="text-preset-5 label-text"
+                >Number of People</label
+              >
+              <div class="text-input">
+                <img src="./images/icon-person.svg" alt="Person Icon" />
+                <input
+                  type="number"
+                  id="number-of-people"
+                  placeholder="0"
+                  step="1"
+                  class="text-preset-3 number-input"
+                />
+              </div>
+            </form>
+          </article>
+        </section>
+        <section class="result-container"></section>
+      </div>
+    </main>
+    <script src="main.js" defer></script>
+  </body>
 </html>
