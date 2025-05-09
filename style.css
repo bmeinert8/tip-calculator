@@ -166,7 +166,9 @@ body {
 .content-container,
 .bill-container,
 .tip-contianer,
-.people-container {
+.people-container,
+.result-content,
+.results-details {
   display: flex;
   flex-direction: column;
 }
@@ -217,4 +219,32 @@ body {
 .custom-btn {
   background-color: var(--Grey50);
   color: var(--Green900);
+}
+
+/* result-section */
+
+.result-content {
+  padding: 24px;
+  background-color: var(--Green900);
+  border-radius: 15px;
+  gap: 32px;
+}
+
+.results-details {
+  gap: 24px;
+}
+
+.tip-amount, .total-amount {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .main-container {}
+}
+
+@media(min-width: 1440px) {
+  
 }

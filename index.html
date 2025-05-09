@@ -40,11 +40,11 @@
             <h2 class="text-preset-5 label-text">Select Tip %</h2>
             <div class="button-grid">
               <button class="tip-btn" data-tip="5">5%</button>
-              <button class="tip-btn" data-tip="5">10%</button>
-              <button class="tip-btn" data-tip="5">15%</button>
-              <button class="tip-btn" data-tip="5">25%</button>
-              <button class="tip-btn" data-tip="5">50%</button>
-              <button class="tip-btn custom-btn" data-tip="5">Custom</button>
+              <button class="tip-btn" data-tip="10">10%</button>
+              <button class="tip-btn" data-tip="15">15%</button>
+              <button class="tip-btn" data-tip="25">25%</button>
+              <button class="tip-btn" data-tip="50">50%</button>
+              <button class="tip-btn custom-btn" data-tip="custom">Custom</button>
             </div>
           </article>
           <article class="people-container">
@@ -65,7 +65,27 @@
             </form>
           </article>
         </section>
-        <section class="result-container"></section>
+        <section class="result-container">
+          <article class="result-content">
+            <div class="results-details">
+              <div class="tip-amount">
+                <div class="tip-amount-label">
+                  <p class="text-preset-5">Tip Amount</p>
+                  <p class="text-preset-6">/ person</p>
+                </div>
+                <p class="text-preset-2">$0.00</p>
+              </div>
+              <div class="total-amount">
+                <div class="tip-amount-label">
+                  <p class="text-preset-5">Total</p>
+                  <p class="text-preset-6">/ person</p>
+                </div>
+                <p class="text-preset-2">$0.00</p>
+              </div>
+            </div>
+            <button class="reset-button">Reset</button>
+          </article>
+        </section>
       </div>
     </main>
     <script src="main.js" defer></script>
