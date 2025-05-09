@@ -208,7 +208,7 @@ body {
   color: var(--White);
   border-radius: 5px;
   padding: 8px 16px;
-  min-width: 147px;
+  width: 147px;
 }
 .button-grid {
   display: grid;
@@ -239,6 +239,25 @@ body {
   justify-content: space-between;
 }
 
+.amount-text {
+  color: var(--Green400)
+}
+
+.amount-label {
+  color: var(--White);
+}
+
+.amount-unit {
+  color: var(--Grey400)
+}
+
+.reset-button {
+  text-transform: uppercase;
+  padding: 8px 32px;
+  background-color: var(--Green750);
+  color: var(--Green800);
+  border-radius: 5px;
+}
 
 /* Media Queries */
 @media (min-width: 768px) {
