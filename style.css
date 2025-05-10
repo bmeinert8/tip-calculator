@@ -151,6 +151,14 @@ body {
   letter-spacing: 0px;
 }
 
+::placeholder {
+  color:var(--Grey300);
+}
+
+.custom-btn::placeholder{
+  color: var(--Grey550);h
+}
+
 /* Main Layout */
 
 .header-image {
@@ -219,6 +227,10 @@ body {
 .custom-btn {
   background-color: var(--Grey50);
   color: var(--Green900);
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px 16px;
+  width: 147px;
 }
 
 /* result-section */
@@ -257,6 +269,27 @@ body {
   background-color: var(--Green750);
   color: var(--Green800);
   border-radius: 5px;
+}
+
+/* Hover and Focus states */
+.text-input:hover {
+  outline: solid 2px var(--Green400);
+  cursor: pointer;
+}
+
+.tip-btn:hover {
+  cursor: pointer;
+  background-color: var(--Green200);
+  color: var(--Green900);
+}
+
+.custom-btn:hover {
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: var(--Green200);
+  cursor: pointer;
 }
 
 /* Media Queries */
