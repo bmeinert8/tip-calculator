@@ -110,6 +110,7 @@ body {
   background-color: var(--Grey200);
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 /* Typography Classes */
@@ -156,7 +157,7 @@ body {
 }
 
 .custom-btn::placeholder{
-  color: var(--Grey550);h
+  color: var(--Grey550);
 }
 
 /* Main Layout */
@@ -168,7 +169,7 @@ body {
 .main-content {
   background-color: var(--White);
   border-radius: 20px;
-  width: 100%;
+  width: 375px;
 }
 
 .content-container,
@@ -294,9 +295,46 @@ body {
 
 /* Media Queries */
 @media (min-width: 768px) {
-  .main-container {}
+  .main-content {
+    width: 608px;
+  }
+
+  .content-container {
+    padding: 48px 80px;
+  }
+
+  .button-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tip-btn, .custom-btn {
+    width: 139.5px;
+  }
+
+  .amount-text {
+    font-size: 48hpx;
+  }
+
 }
 
 @media(min-width: 1440px) {
-  
+  .main-content {
+    width: 920px;
+  }
+
+  .content-container {
+    flex-direction: row;
+    padding: 32px;
+    gap: 48px;
+  }
+
+  .result-container, .result-content{
+    width: 100%;
+  }
+
+  .result-content{
+    justify-content: space-between;
+    padding: 24px;
+    height: 100%
+  }
 }
