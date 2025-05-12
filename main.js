@@ -25,6 +25,7 @@ tipButtons.forEach(button => {
     console.log(selectedTip);
     //remove custom tip value when tip button is clicked if present.
     customTip.value = '';
+    calculateTip();
   });
 });
 
@@ -37,7 +38,20 @@ customTip.addEventListener('input', () => {
   //Store the selected tip percentage
   selectedTip = parseFloat(customTip.value) || 0;
   console.log(selectedTip);
+  calculateTip();
 });
 
+// Add calculation function
+function calculateTip(){
+  const bill = parseFloat(billInput.value);
+  const people = parseFloat(peopleInput.value);
+  const tipPercentage = selectedTip / 100;
+
+  const tipAmount = (bill * tipPercentage) / people
+  const totalAmount = (bill / people) + tipAmount;
+  
+  tipPerPerson.textContent = `$${tipAmount.toFixed(2)}`;
+  totalPerPerson.textContent = `$${totalAmount.toFixed(2)}`;
+}
 
 
