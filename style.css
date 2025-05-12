@@ -193,6 +193,7 @@ body {
 
 .label-text {
   color: var(--Grey500);
+  margin-bottom: 8px;
 }
 
 .text-input {
@@ -219,6 +220,12 @@ body {
   padding: 8px 16px;
   width: 147px;
 }
+
+.tip-active {
+  background-color: var(--Green400);
+  color: var(--Green900)
+}
+
 .button-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -232,6 +239,24 @@ body {
   border-radius: 5px;
   padding: 8px 16px;
   width: 147px;
+}
+
+.people-label-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.people-container.error {
+  outline: 2px solid var(--Orange400);
+}
+
+.error {
+  color: var(--Orange400);
+}
+
+.invisible {
+  display: none;
 }
 
 /* result-section */

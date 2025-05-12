@@ -31,7 +31,7 @@
                   id="bill"
                   placeholder="0"
                   step="0.01"
-                  class="text-preset-3 number-input"
+                  class="text-preset-3 number-input js-bill-input"
                 />
               </div>
             </form>
@@ -39,19 +39,22 @@
           <article class="tip-container">
             <h2 class="text-preset-5 label-text">Select Tip %</h2>
             <div class="button-grid">
-              <button class="tip-btn text-preset-3" data-tip="5">5%</button>
-              <button class="tip-btn text-preset-3" data-tip="10">10%</button>
-              <button class="tip-btn text-preset-3" data-tip="15">15%</button>
-              <button class="tip-btn text-preset-3" data-tip="25">25%</button>
-              <button class="tip-btn text-preset-3" data-tip="50">50%</button>
-              <input class="custom-btn text-preset-3" data-tip="custom" placeholder="Custom" type="number" id="custom-tip" step="5">
+              <button class="tip-btn text-preset-3 js-tip-btn" data-tip="5">5%</button>
+              <button class="tip-btn text-preset-3 js-tip-btn" data-tip="10">10%</button>
+              <button class="tip-btn text-preset-3 js-tip-btn" data-tip="15">15%</button>
+              <button class="tip-btn text-preset-3 js-tip-btn" data-tip="25">25%</button>
+              <button class="tip-btn text-preset-3 js-tip-btn" data-tip="50">50%</button>
+              <input class="custom-btn text-preset-3 js-custom-tip" data-tip="custom" placeholder="Custom" type="number" id="custom-tip" step="5">
             </div>
           </article>
           <article class="people-container">
             <form action="">
-              <label for="number-of-people" class="text-preset-5 label-text"
-                >Number of People</label
-              >
+              <div class="people-label-container">
+                <label for="number-of-people" class="text-preset-5 label-text">
+                  Number of People
+                </label>
+                <p class="text-preset-5 error invisible js-error">Can't be zero.</p>
+              </div>
               <div class="text-input">
                 <img src="./images/icon-person.svg" alt="Person Icon" />
                 <input
@@ -59,7 +62,7 @@
                   id="number-of-people"
                   placeholder="0"
                   step="1"
-                  class="text-preset-3 number-input"
+                  class="text-preset-3 number-input js-people-input"
                 />
               </div>
             </form>
@@ -73,17 +76,17 @@
                   <p class="text-preset-5 amount-label">Tip Amount</p>
                   <p class="text-preset-6 amount-unit">/ person</p>
                 </div>
-                <p class="text-preset-2 amount-text">$0.00</p>
+                <p class="text-preset-2 amount-text js-person-tip">$0.00</p>
               </div>
               <div class="total-amount">
                 <div class="tip-amount-label">
                   <p class="text-preset-5 amount-label">Total</p>
                   <p class="text-preset-6 amount-unit">/ person</p>
                 </div>
-                <p class="text-preset-2 amount-text">$0.00</p>
+                <p class="text-preset-2 amount-text js-person-total">$0.00</p>
               </div>
             </div>
-            <button class="reset-button text-preset-4">Reset</button>
+            <button class="reset-button text-preset-4 js-reset button">Reset</button>
           </article>
         </section>
       </div>
