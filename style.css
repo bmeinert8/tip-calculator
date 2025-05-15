@@ -153,10 +153,10 @@ body {
 }
 
 ::placeholder {
-  color:var(--Grey300);
+  color: var(--Grey300);
 }
 
-.custom-btn::placeholder{
+.custom-btn::placeholder {
   color: var(--Grey550);
 }
 
@@ -168,8 +168,10 @@ body {
 
 .main-content {
   background-color: var(--White);
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   width: 375px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .content-container,
@@ -223,7 +225,7 @@ body {
 
 .tip-active {
   background-color: var(--Green400);
-  color: var(--Green900)
+  color: var(--Green900);
 }
 
 .button-grid {
@@ -247,7 +249,7 @@ body {
   margin-bottom: 8px;
 }
 
-.people-container.error {
+.people-container-error {
   outline: 2px solid var(--Orange400);
 }
 
@@ -272,13 +274,14 @@ body {
   gap: 24px;
 }
 
-.tip-amount, .total-amount {
+.tip-amount,
+.total-amount {
   display: flex;
   justify-content: space-between;
 }
 
 .amount-text {
-  color: var(--Green400)
+  color: var(--Green400);
 }
 
 .amount-label {
@@ -286,7 +289,7 @@ body {
 }
 
 .amount-unit {
-  color: var(--Grey400)
+  color: var(--Grey400);
 }
 
 .reset-button {
@@ -295,6 +298,10 @@ body {
   background-color: var(--Green750);
   color: var(--Green800);
   border-radius: 5px;
+}
+
+.reset-active {
+  background-color: var(--Green400);
 }
 
 /* Hover and Focus states */
@@ -322,6 +329,7 @@ body {
 @media (min-width: 768px) {
   .main-content {
     width: 608px;
+    border-radius: 20px;
   }
 
   .content-container {
@@ -332,17 +340,22 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .tip-btn, .custom-btn {
+  .tip-btn,
+  .custom-btn {
     width: 139.5px;
   }
 
   .amount-text {
     font-size: 48hpx;
   }
-
 }
 
-@media(min-width: 1440px) {
+@media (min-width: 1440px) {
+  body {
+    justify-content: center;
+    gap: 64px;
+  }
+
   .main-content {
     width: 920px;
   }
@@ -353,13 +366,18 @@ body {
     gap: 48px;
   }
 
-  .result-container, .result-content{
+  .result-container,
+  .result-content {
     width: 100%;
   }
 
-  .result-content{
+  .result-content {
     justify-content: space-between;
     padding: 24px;
-    height: 100%
+    height: 100%;
+  }
+
+  .results-details {
+    gap: 24px;
   }
 }

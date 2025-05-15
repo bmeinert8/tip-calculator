@@ -2,8 +2,9 @@ var billInput = document.querySelector('.js-bill-input');
 var tipButtons = document.querySelectorAll('.js-tip-btn');
 var customTip = document.querySelector('.js-custom-tip');
 var peopleInput = document.querySelector('.js-people-input');
+var peopleError = document.querySelector('.js-people-input-container');
 var errorMessage = document.querySelector('.js-error');
-var tipPerPerson = document.querySelector('.js-person-tip')
+var tipPerPerson = document.querySelector('.js-person-tip');
 var totalPerPerson = document.querySelector('.js-person-total');
 var resetButton = document.querySelector('.js-reset-button');
 
@@ -12,10 +13,10 @@ let selectedTip = 0;
 
 //Tip buttons
 
-tipButtons.forEach(button => {
+tipButtons.forEach((button) => {
   button.addEventListener('click', () => {
     // remove the active class from all tip buttons
-    tipButtons.forEach(btn => btn.classList.remove('tip-active'));
+    tipButtons.forEach((btn) => btn.classList.remove('tip-active'));
 
     // add an active class to the button clicked
     button.classList.add('tip-active');
@@ -33,7 +34,7 @@ tipButtons.forEach(button => {
 
 customTip.addEventListener('input', () => {
   //remove active class from the seleced tip button
-  tipButtons.forEach(btn => btn.classList.remove('tip-active'));
+  tipButtons.forEach((btn) => btn.classList.remove('tip-active'));
 
   //Store the selected tip percentage
   selectedTip = parseFloat(customTip.value) || 0;
@@ -41,17 +42,58 @@ customTip.addEventListener('input', () => {
   calculateTip();
 });
 
-// Add calculation function
-function calculateTip(){
-  const bill = parseFloat(billInput.value);
-  const people = parseFloat(peopleInput.value);
-  const tipPercentage = selectedTip / 100;
+// Bill input
+billInput.addEventListener('input', calculateTip);
 
-  const tipAmount = (bill * tipPercentage) / people
-  const totalAmount = (bill / people) + tipAmount;
-  
-  tipPerPerson.textContent = `$${tipAmount.toFixed(2)}`;
-  totalPerPerson.textContent = `$${totalAmount.toFixed(2)}`;
+//People input
+peopleInput.addEventListener('input', calculateTip);
+
+// Reset button
+resetButton.addEventListener('click', () => {
+  // Reset all inputs and outputs
+  billInput.value = '';
+  customTip.value = '';
+  peopleInput.value = '';
+  selectedTip = '';
+  tipPerPerson.textContent = '$o.oo';
+  totalPerPerson.textContent = '$0.00';
+  tipButtons.forEach((btn) => btn.classList.remove('tip-active'));
+  errorMessage.classList.add('invisible');
+  resetButton.classList.remove('reset-active');
+});
+
+// Helper function
+function parseNumber(value, defaultValue) {
+  const parsedValue = parseFloat(value);
+  return isNaN(parsedValue) ? defaultValue : parsedValue;
 }
 
+// Add calculation function
+function calculateTip() {
+  const bill = parseNumber(billInput.value, 0);
+  const people = parseNumber(peopleInput.value, 0);
+  const tipPercentage = parseNumber(selectedTip, 0) / 100;
 
+  if (bill <= 0 || people <= 0 || tipPercentage <= 0) {
+    if (people <= 0) {
+      errorMessage.classList.remove('invisible');
+      peopleError.classList.add('people-container-error');
+    }
+    tipPerPerson.textContent = '$0.00';
+    totalPerPerson.textContent = '$0.00';
+    return;
+  }
+
+  if (people > 0) {
+    errorMessage.classList.add('invisible');
+    peopleError.classList.remove('people-container-error');
+  }
+
+  const tipAmount = (bill * tipPercentage) / people;
+  const totalAmount = bill / people + tipAmount;
+
+  tipPerPerson.textContent = `$${tipAmount.toFixed(2)}`;
+  totalPerPerson.textContent = `$${totalAmount.toFixed(2)}`;
+
+  resetButton.classList.add('reset-active');
+}
