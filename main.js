@@ -54,8 +54,8 @@ resetButton.addEventListener('click', () => {
   billInput.value = '';
   customTip.value = '';
   peopleInput.value = '';
-  selectedTip = '';
-  tipPerPerson.textContent = '$o.oo';
+  selectedTip = 0;
+  tipPerPerson.textContent = '$0.00';
   totalPerPerson.textContent = '$0.00';
   tipButtons.forEach((btn) => btn.classList.remove('tip-active'));
   errorMessage.classList.add('invisible');

@@ -116,39 +116,39 @@ body {
 /* Typography Classes */
 
 .text-preset-1 {
-  font-size: 48px;
-  line-height: 71px;
-  letter-spacing: -1px;
+  font-size: 3rem;
+  line-height: 4.4375rem;
+  letter-spacing: -0.0625rem;
 }
 
 .text-preset-2 {
-  font-size: 32px;
-  line-height: 47px;
-  letter-spacing: -0.67px;
+  font-size: 2rem;
+  line-height: 2.9375rem;
+  letter-spacing: -0.041875rem;
 }
 
 .text-preset-3 {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
   letter-spacing: 0px;
   color: var(--Green900);
 }
 
 .text-preset-4 {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
   letter-spacing: 0px;
 }
 
 .text-preset-5 {
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 1rem;
+  line-height: 1.875rem;
   letter-spacing: 0px;
 }
 
 .text-preset-6 {
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 0.8125rem;
+  line-height: 1.1875rem;
   letter-spacing: 0px;
 }
 
@@ -163,15 +163,15 @@ body {
 /* Main Layout */
 
 .header-image {
-  margin: 41px auto;
+  margin: 2.5625rem auto;
 }
 
 .main-content {
   background-color: var(--White);
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  width: 375px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  width: 23.4375rem;
+  box-shadow: 0px 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
 }
 
 .content-container,
@@ -185,23 +185,23 @@ body {
 }
 
 .content-container {
-  padding: 32px 24px;
-  gap: 32px;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
 }
 
 .bill-container {
-  gap: 32px;
+  gap: 2rem;
 }
 
 .label-text {
   color: var(--Grey500);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .text-input {
   background-color: var(--Grey50);
-  border-radius: 8px;
-  padding: 8px 16px;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   gap: 50%;
@@ -212,15 +212,15 @@ body {
 }
 
 .tip-contiainer {
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .tip-btn {
   background-color: var(--Green900);
   color: var(--White);
-  border-radius: 5px;
-  padding: 8px 16px;
-  width: 147px;
+  border-radius: 0.3125rem;
+  padding: 0.5rem 1rem;
+  width: 9.1875rem;
 }
 
 .tip-active {
@@ -231,26 +231,26 @@ body {
 .button-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 1rem;
 }
 
 .custom-btn {
   background-color: var(--Grey50);
   color: var(--Green900);
   text-align: center;
-  border-radius: 5px;
-  padding: 8px 16px;
-  width: 147px;
+  border-radius: 0.3125rem;
+  padding: 0.5rem 1rem;
+  width: 9.1875rem;
 }
 
 .people-label-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .people-container-error {
-  outline: 2px solid var(--Orange400);
+  outline: 0.125rem solid var(--Orange400);
 }
 
 .error {
@@ -264,14 +264,14 @@ body {
 /* result-section */
 
 .result-content {
-  padding: 24px;
+  padding: 1.5rem;
   background-color: var(--Green900);
-  border-radius: 15px;
-  gap: 32px;
+  border-radius: 0.9375rem;
+  gap: 2rem;
 }
 
 .results-details {
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 .tip-amount,
@@ -294,10 +294,10 @@ body {
 
 .reset-button {
   text-transform: uppercase;
-  padding: 8px 32px;
+  padding: 0.5rem 2rem;
   background-color: var(--Green750);
   color: var(--Green800);
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 
 .reset-active {
@@ -306,7 +306,7 @@ body {
 
 /* Hover and Focus states */
 .text-input:hover {
-  outline: solid 2px var(--Green400);
+  outline: solid 0.125rem var(--Green400);
   cursor: pointer;
 }
 
@@ -328,12 +328,12 @@ body {
 /* Media Queries */
 @media (min-width: 768px) {
   .main-content {
-    width: 608px;
-    border-radius: 20px;
+    width: 38rem;
+    border-radius: 1.25rem;
   }
 
   .content-container {
-    padding: 48px 80px;
+    padding: 3rem 5rem;
   }
 
   .button-grid {
@@ -342,28 +342,28 @@ body {
 
   .tip-btn,
   .custom-btn {
-    width: 139.5px;
+    width: 8.71875rem;
   }
 
   .amount-text {
-    font-size: 48hpx;
+    font-size: 3rem;
   }
 }
 
 @media (min-width: 1440px) {
   body {
     justify-content: center;
-    gap: 64px;
+    gap: 4rem;
   }
 
   .main-content {
-    width: 920px;
+    width: 57.5rem;
   }
 
   .content-container {
     flex-direction: row;
-    padding: 32px;
-    gap: 48px;
+    padding: 2rem;
+    gap: 3rem;
   }
 
   .result-container,
@@ -373,11 +373,11 @@ body {
 
   .result-content {
     justify-content: space-between;
-    padding: 24px;
+    padding: 1.5rem;
     height: 100%;
   }
 
   .results-details {
-    gap: 24px;
+    gap: 1.5rem;
   }
 }
