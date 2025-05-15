@@ -41,8 +41,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://github.com/your-username/tip-calculator-app)
-- Live Site URL: [Live Demo](https://your-username.github.io/tip-calculator-app/) _(Optional, if deployed)_
+- Solution URL: [GitHub Repository](https://github.com/bmeinert8/tip-calculator)
+- Live Site URL: [Live Demo](https://bmeinert8.github.io/tip-calculator/)
 
 ## My Process
 
@@ -83,5 +83,5 @@ To run this project locally:
 ## Author
 
 - Name: [Brian Meinert]
-- Frontend Mentor: [@your-username](https://www.frontendmentor.io/profile/bmeinert8)
-- GitHub: [your-username](https://github.com/bmeinert8)
+- Frontend Mentor: [@bmeinert8](https://www.frontendmentor.io/profile/bmeinert8)
+- GitHub: [bmeinert8](https://github.com/bmeinert8)
