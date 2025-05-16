@@ -7,6 +7,8 @@ var errorMessage = document.querySelector('.js-error');
 var tipPerPerson = document.querySelector('.js-person-tip');
 var totalPerPerson = document.querySelector('.js-person-total');
 var resetButton = document.querySelector('.js-reset-button');
+var historyButton = document.querySelector('.js-history-button');
+var closeButton = document.querySelector('.js-close-modal-btn');
 
 // Event Listeners
 let selectedTip = 0;
@@ -60,6 +62,18 @@ resetButton.addEventListener('click', () => {
   tipButtons.forEach((btn) => btn.classList.remove('tip-active'));
   errorMessage.classList.add('invisible');
   resetButton.classList.remove('reset-active');
+});
+
+// History button
+historyButton.addEventListener('click', () => {
+  const historyModal = document.querySelector('.js-modal');
+  historyModal.classList.remove('modal-hidden');
+});
+
+// Close button
+closeButton.addEventListener('click', () => {
+  const historyModal = document.querySelector('.js-modal');
+  historyModal.classList.add('modal-hidden');
 });
 
 // Helper function

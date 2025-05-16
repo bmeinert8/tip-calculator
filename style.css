@@ -341,6 +341,7 @@ body {
 }
 
 /* Modal styling */
+
 .modal {
   position: fixed;
   top: 0;
@@ -390,6 +391,9 @@ body {
   cursor: pointer;
 }
 
+.modal-hidden {
+  display: none;
+}
 /* Media Queries */
 @media (min-width: 768px) {
   .main-content {
@@ -412,6 +416,10 @@ body {
 
   .amount-text {
     font-size: 3rem;
+  }
+
+  .modal-content {
+    padding: 2rem;
   }
 }
 
