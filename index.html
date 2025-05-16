@@ -108,11 +108,32 @@
                 <p class="text-preset-2 amount-text js-person-total">$0.00</p>
               </div>
             </div>
-            <button class="reset-button text-preset-4 js-reset-button">
-              Reset
-            </button>
+            <div class="results-button-container">
+              <button class="reset-button text-preset-4 js-reset-button">
+                Reset
+              </button>
+              <button class="history-button text-preset-4 js-history-button">
+                History
+              </button>
+            </div>
           </article>
         </section>
+      </div>
+      <div class="modal js-modal">
+        <div class="modal-content">
+          <h2 class="text-preset-4">Tip History</h2>
+          <div class="history-list js-history-list">
+            <!-- dynamically generate history here-->
+          </div>
+          <div class="modal-buttons-container">
+            <button class="modal-btn text-preset-5 js-clear-history-btn">
+              Clear
+            </button>
+            <button class="modal-btn text-preset-5 js-close-modal-btn">
+              Close
+            </button>
+          </div>
+        </div>
       </div>
     </main>
     <script src="main.js" defer></script>
